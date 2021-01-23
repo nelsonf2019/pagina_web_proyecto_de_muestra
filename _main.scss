@@ -1,0 +1,56 @@
+.main  {
+
+    margin-top: 350px;
+    
+}
+
+.welcome {
+
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome--title {
+
+    font-size: 2em;
+    position: relative;
+}
+
+.welcome--title:before {
+    content: "";
+    width: 30%;
+    position: absolute;
+    top: -20px;
+    left: 35%;
+    height: 3px;
+    background: $color-primary;
+    }
+
+.welcome--text {
+
+    font-size: 1.2em;
+    color: #777;
+}
+
+.welcome--btn {
+
+    display: block;
+    border: 2px solid $color-primary;
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    text-decoration: none;
+    color: $color-primary;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: all 0.5s;
+    border-radius: 10xp;
+}
+
+.welcome--btn:hover {
+
+    background: $color-primary;
+    color: white;
+
+}

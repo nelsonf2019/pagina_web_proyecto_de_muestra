@@ -1,0 +1,22 @@
+
+* {
+    /*Borde para celular- modelo de caja -es para que los padding nose aumenten al modelo de caja*/
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    font-family: "Roboto-Regular";
+} 
+
+h1, h2, h3, h4, h5, h6  {
+
+    font-family: "Fraunces";
+}
+
+img {
+
+    display: block;
+    max-width: 100%;
+}

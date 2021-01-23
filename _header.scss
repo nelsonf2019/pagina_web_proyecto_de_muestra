@@ -1,0 +1,61 @@
+
+.container--flex {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header {
+    padding: 0 15px;
+
+}
+ 
+.main-title {
+
+    color: white;
+}
+
+.color-span {
+
+    color: $color-primary;
+}
+
+
+
+.banner {
+
+    background: url(../img/autosbanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
+    min-height: 400px; /*Alto minimo de la imagen*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -999;
+
+}
+/*Esto es un pseudo elemento, creo un elemento a partir de otro*/
+.banner:before {
+
+    content:"";
+    width: 100%;
+    min-height: 400px;
+    background: rgba(0,0,0,0.3); /*Esto es la opacidad que se le da a la imagen del banner*/
+    position: absolute;
+    top:0;
+    left:0;
+    
+}
+
+.banner--content {
+   width: 90%;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 1.3em;
+}
+

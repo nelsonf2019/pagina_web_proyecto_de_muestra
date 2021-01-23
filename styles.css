@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+@font-face {
+  font-family: "Fraunces";
+  src: url(../fonts/Fraunces.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+* {
+  /*Borde para celular- modelo de caja -es para que los padding nose aumenten al modelo de caja*/
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto-Regular";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fraunces";
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-header {
+  padding: 0 15px;
+}
+
+.main-title {
+  color: white;
+}
+
+.color-span {
+  color: #EEAD31;
+}
+
+.banner {
+  background: url(../img/autosbanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  /*Alto minimo de la imagen*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -999;
+}
+
+/*Esto es un pseudo elemento, creo un elemento a partir de otro*/
+.banner:before {
+  content: "";
+  width: 100%;
+  min-height: 400px;
+  background: rgba(0, 0, 0, 0.3);
+  /*Esto es la opacidad que se le da a la imagen del banner*/
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner--content {
+  width: 90%;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  color: white;
+  font-size: 1.3em;
+}
+
+.main {
+  margin-top: 350px;
+}
+
+.welcome {
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome--title {
+  font-size: 2em;
+  position: relative;
+}
+
+.welcome--title:before {
+  content: "";
+  width: 30%;
+  position: absolute;
+  top: -20px;
+  left: 35%;
+  height: 3px;
+  background: #EEAD31;
+}
+
+.welcome--text {
+  font-size: 1.2em;
+  color: #777;
+}
+
+.welcome--btn {
+  display: block;
+  border: 2px solid #EEAD31;
+  width: 200px;
+  margin: auto;
+  padding: 10px;
+  text-decoration: none;
+  color: #EEAD31;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 10xp;
+}
+
+.welcome--btn:hover {
+  background: #EEAD31;
+  color: white;
+}
+
+.icon-menu {
+  font-size: 1.5em;
+  color: #EEAD31;
+  border: 1px solid white;
+  display: block;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 70;
+  left: 0;
+  background: #212121;
+  width: 100%;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu__item {
+  padding: 20px;
+  text-align: center;
+}
+
+.menu__link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu__link span {
+  padding: 10px;
+  font-size: 1.1em1;
+}
+
+.menu__link:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid #EEAD31;
+  border-top: 2px solid #EEAD31;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.menu__link:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-left: 2px solid #EEAD31;
+  border-bottom: 2px solid #EEAD31;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.menu__link span:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-left: 2px solid #EEAD31;
+  border-top: 2px solid #EEAD31;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.menu__link span:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-bottom: 2px solid #EEAD31;
+  border-right: 2px solid #EEAD31;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.menu__link--select:before, .menu__link--select:after, .menu__link--select span:before, .menu__link--select span:after {
+  opacity: 1;
+}
+
+.menu__item:hover .menu__link:before, .menu__item:hover .menu__link:after, .menu__item:hover .menu__link span:before, .menu__item:hover .menu__link span:after {
+  opacity: 1;
+}
+
+.container-design {
+  margin: 20px 0;
+}
+
+.design--item {
+  position: relative;
+}
+
+.deisign--item:before {
+  content: "";
+  width: 100%;
+  min-height: 300px;
+  background: rgba(0, 0, 0, 0.4);
+  /*Esto es la opacidad que se le da a la imagen del banner*/
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.design--title {
+  position: absolute;
+  /*Para que se pueda posicionar dentro del .container-design si no loe ponemos absolute se puede ir afuera de la caja*/
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  color: white;
+  font-size: 1.8em;
+  width: 100%;
+  text-align: center;
+}
+
+.design--title:before {
+  content: "";
+  width: 35%;
+  position: absolute;
+  top: -20px;
+  left: 30%;
+  height: 3px;
+  background: #EEAD31;
+}
+
+.design--title:after {
+  content: "";
+  width: 35%;
+  position: absolute;
+  bottom: -30px;
+  left: 30%;
+  height: 3px;
+  background: #EEAD31;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,103 @@
+.icon-menu {
+
+    font-size: 1.5em;
+    color: $color-primary;
+    border: 1px solid white;
+    display: block;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu {
+   position: absolute;
+  top: 70;
+  left: 0;
+  background: $color-menu;
+  width: 100%;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+.menu__item {
+
+    padding: 20px;
+    text-align: center;
+}
+.menu__link {
+
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+.menu__link span {
+
+    padding: 10px;
+    font-size: 1.1em1;
+}
+
+
+
+.menu__link:before {
+
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid $color-primary;
+    border-top: 2px solid $color-primary;
+    top: 0;
+    right: 0;
+    opacity: 0;
+
+}
+
+.menu__link:after {
+
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid $color-primary;
+    border-bottom: 2px solid $color-primary;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.menu__link span:before {
+
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid $color-primary;
+    border-top: 2px solid $color-primary;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+}
+.menu__link span:after {
+
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-bottom: 2px solid $color-primary;
+    border-right: 2px solid $color-primary;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+
+}
+
+.menu__link--select:before, .menu__link--select:after, .menu__link--select span:before, .menu__link--select span:after {
+    opacity: 1;
+  }
+
+  .menu__item:hover .menu__link:before, .menu__item:hover .menu__link:after, .menu__item:hover .menu__link span:before, .menu__item:hover .menu__link span:after{
+
+    opacity: 1;
+
+  }
